@@ -5,12 +5,16 @@ spring:
   application:
     name: catalog-service
   datasource:
-    url: jdbc:h2:~/Spring/msa/gateway/h2/testdb
+    url: jdbc:h2:~/Spring/msa/gateway/h2/testdb-catalog
     username: sa
+  sql:
+    init:
+      mode: never # always로 해놓으면 data.sql문 실행
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+    defer-datasource-initialization: true # true로 해놓으면 data.sql문 실행
   h2:
     console:
       enabled: true
