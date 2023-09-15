@@ -5,7 +5,7 @@ spring:
   application:
     name: catalog-service
   datasource:
-    url: jdbc:h2:~/Spring/msa/gateway/h2/testdb-catalog
+    url: jdbc:h2:mem:testdb-catalog
     username: sa
   sql:
     init:
